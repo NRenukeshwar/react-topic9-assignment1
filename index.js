@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import Div from './Hello'
-class Clock extends React.Component {
+import Div from './DivComponent'
+class App extends React.Component {
 
   constructor() {
     console.log("Calling Constructor of App")
     super();
     this.state = {
-     thought:'Sun rises in east',
+     thought:'If people are not laughing at your goals, your goals are too small.',
      show:true 
     }
   }
@@ -36,7 +36,7 @@ class Clock extends React.Component {
       myheader = <Div thought={this.state.thought} removeDiv={this.removeDiv} />;
     };
     return (
-      <div>
+      <div align="center">
       {myheader}
       {!this.state.show &&<button onClick={(event)=>{this.showDiv(event)}}>Show Div</button>}
       </div>
@@ -45,6 +45,6 @@ class Clock extends React.Component {
 }
 
 ReactDOM.render(
-  <Clock />,
+  <App />,
   document.getElementById('root')
 );

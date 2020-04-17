@@ -24,7 +24,9 @@ class Div extends React.Component{
   {
     return(
       <div onClick={(event)=>this.props.removeDiv(event)}>
-        <p>Thought for the Day {this.props.thought}</p>
+        <p>--Thought for the Day--</p>
+        <h2 style={{color:"seagreen"}}>{this.props.thought}</h2>
+        <p style={{color:"blue"}}>--Azim Premji</p>
       </div>
     )
   }
