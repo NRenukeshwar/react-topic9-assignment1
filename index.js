@@ -21,6 +21,10 @@ class App extends React.Component {
     console.log("Calling componentDidUpdate of App")
   }
 
+  componentWillUnmount()
+  {
+    console.log("Calling componentWillUnmount of App")
+  }
   removeDiv=(event)=>{
     event.preventDefault();
     this.setState({show: !this.state.show});
